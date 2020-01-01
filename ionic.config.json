@@ -1,0 +1,7 @@
+{
+  "name": "dishaLaser",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

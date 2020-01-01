@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/select-option"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="signOut()">SignOut</ion-button>
+        </ion-buttons>
+        <ion-title>Add A New Case</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+        <ion-col>
+            <ion-card>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Description</ion-label>
+                        <ion-textarea id="desc"></ion-textarea>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">History (if any)</ion-label>
+                        <ion-textarea id="desc"></ion-textarea>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Duration</ion-label>
+                        <ion-row>
+                            <ion-col>
+                                <ion-input id="duration" type="number"></ion-input>
+                            </ion-col>
+                            <ion-col>
+                                <ion-button fill="clear" (click)="showBasicPicker()">
+                                    <ion-icon slot="icon-only" name="arrow-dropdown"></ion-icon>{{duration}}</ion-button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-item>
+                    <!-- <ion-item>
+                        <ion-label position="floating">Symptoms</ion-label>
+                    </ion-item> -->
+                    <angular2-multiselect [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+
+                    <ion-item>
+                        <ion-label>Body Location:</ion-label>
+                        <ion-button fill="clear" (click)="showBasicPickerBP()">
+                            <ion-icon slot="icon-only" name="arrow-dropdown"></ion-icon>{{bodyPart}}</ion-button>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Previous Treatments (If any)</ion-label>
+                        <ion-textarea id="desc"></ion-textarea>
+                    </ion-item>
+                    <ion-button margin id="addCase" (click)="addCase()" color="primary">ADD</ion-button>
+                    <ion-button>
+                        <ion-icon text-center name="cloud-upload" slot="icon-only"></ion-icon>&nbsp;&nbsp;Upload Photo
+                    </ion-button>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-content>

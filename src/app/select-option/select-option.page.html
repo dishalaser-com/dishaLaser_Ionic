@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="signOut()">SignOut</ion-button>
+        </ion-buttons>
+        <ion-title>Select An Option</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content text-center class="vertical-align-content">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-row>
+                    <ion-button shape="round" class="center">
+                        <ion-icon slot="icon-only" name="search"></ion-icon>&nbsp;Previous Cases</ion-button>
+                </ion-row>
+                <ion-row>
+                    <ion-button shape="round" [routerLink]="['/new-case']" class="center">
+                        <ion-icon slot="icon-only" name="clipboard"></ion-icon>&nbsp; Start A New Case</ion-button>
+                </ion-row>
+                <ion-row>
+                    <ion-button shape="round" class="center">
+                        <ion-icon slot="icon-only" name="chatboxes"></ion-icon>&nbsp; Chat With a Doctor</ion-button>
+                </ion-row>
+                <ion-row>
+                    <ion-button shape="round" class="center">
+                        <ion-icon slot="icon-only" name="help"></ion-icon>&nbsp;FAQ's
+                    </ion-button>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

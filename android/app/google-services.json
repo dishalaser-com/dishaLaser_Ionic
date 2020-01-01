@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "469016556922",
+    "firebase_url": "https://dishalaserionic.firebaseio.com",
+    "project_id": "dishalaserionic",
+    "storage_bucket": "dishalaserionic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469016556922:android:825f82cd2de2c480a112c3",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469016556922-rd3b9f66vpqqrjni43jiud83tnqtihn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "806413574aab6ffb99bc1ef5820ece4575b2d1b7"
+          }
+        },
+        {
+          "client_id": "469016556922-porsnsbonk81mutl8v49n7bni273r66n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-uHTpekks6KIK_9AC44TDD5xvStKWQzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469016556922-porsnsbonk81mutl8v49n7bni273r66n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

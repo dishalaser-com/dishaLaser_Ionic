@@ -1,0 +1,17 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+}
+
+// .options {
+//     height: 100%;
+//     // display: block;
+//     vertical-align: middle;
+// }
+.vertical-align-content {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100%
+}

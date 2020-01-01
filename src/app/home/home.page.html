@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title *ngIf="!afAuth.auth.currentUser">
+            Log In
+        </ion-title>
+        <ion-buttons slot="end" *ngIf="afAuth.auth.currentUser">
+            <ion-button (click)="registerCase()">Register A Case</ion-button>
+            <ion-button (click)="signOut()">SignOut</ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <firebase-ui></firebase-ui>
+
+    <ion-card *ngIf="afAuth.auth.currentUser">
+        <div>
+            <ion-slides pager="true" [options]="slideOpts">
+                <ion-slide>
+                    <ion-img src="assets/s1.jpg"></ion-img>
+                </ion-slide>
+                <ion-slide>
+                    <ion-img src="assets/s2.jpg"></ion-img>
+                </ion-slide>
+                <ion-slide>
+                    <ion-img src="assets/s3.jpg"></ion-img>
+                </ion-slide>
+                <ion-slide>
+                    <ion-img src="assets/s4.jpg"></ion-img>
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+    </ion-card>
+    <ion-card *ngIf="afAuth.auth.currentUser">
+        <ion-card-header>Treatment And Services</ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-list-header>Dermatological Consultations</ion-list-header>
+                <ion-item>Skin Diseases</ion-item>
+                <ion-item>Hair Diseases</ion-item>
+                <ion-item>Nail Diseases</ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-list-header>Dermatosurgery</ion-list-header>
+                <ion-item>Vitiligo</ion-item>
+                <ion-item>Nail Surgery</ion-item>
+                <ion-item>Skin Biopsy</ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="afAuth.auth.currentUser">
+        <ion-card-header>Meet Our Experts</ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>Dr. Jay Gupte (M.B.B.S)</ion-item>
+                <ion-item>Dr. Prashant Kini (M.D.)</ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
